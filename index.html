@@ -1,26 +1,293 @@
-<!DOCTYPE>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-    <link rel="shortcut icon" type="imagex/png" href="robo1.png">
-    <link rel="stylesheet" href="style.css">
-  </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
 
+
+<script>
+    function claro(){
+      var fundo = document.getElementById("fundo");
+      fundo.classList.add("fundoclaro");
+      fundo.classList.remove("body");
+      document.getElementById("escode2").style.display = "block"
+      document.getElementById("escode").hidden = true;
+
+    }
+
+    function escuro(){
+      document.getElementById("escode2").style.display = "none"
+      document.getElementById("escode2").hidden = true;
+
+      var fundo = document.getElementById("fundo");
+      fundo.classList.remove("fundoescuro");
+      document.getElementById("escode").hidden = false
+    }
+
+
+    function direita(){
+      var direita = document.getElementById("direita");
+      direita.classList.add("direita");
+    }
+
+
+
+    
+</script>
+
+<button id="direita" onclick="direita()">direita</button>
+
+<style>
+  .direita{
+    width: 100%;
+  }
+
+
+
+
+
+
+
+  header{
+    height: 10vh;
+  }
+    body{
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+      background-image: url(noite.jpg);
+      background-size: 100%;
+      background-position-y: -1500px;
+      background-color: #8937b5;
+      background-repeat: no-repeat;
+      text-align: center; 
+      color: rgb(244, 220, 220);
+    }
+    .fundoclaro{
+      padding: 0;
+      margin: 0;
+      background-color: #9fffda;
+      background-position-y: -700px;
+      height: 60vh;
+      background-image: url(dia.jpg);
+      background-size: 100%;
+      enable-background: accumulate;
+      background-repeat: no-repeat;
+      text-align: center; 
+      color: rgb(244, 220, 220);
+    }
+    .texto{
+        margin: 1%;
+        text-align: center;
+    }
+    #img{
+        text-align: left;
+    }
+    
+    #tema button{
+      width: 100px;
+      height: 20px;
+    }
+    .Drop-shadow {
+      display: none;
+      float:left;
+      
+    }
+    .Drop-shadow img {
+      filter:drop-shadow(1px 17px 14px #dcdc02);
+    }
+    .luz{
+      text-align: right;
+      margin-left: 1890%;
+      margin-top: -13%;
+    }
+    @media screen and (max-width: 767px) {
+      .luz{
+      text-align: right;
+      margin-left: 600%;
+      margin-top: -13%;
+    }
+    
+      
+    }
+    
+
+    #tema{
+      height: 18px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: fixed;
+      top: 1.3%;
+      gap: 10px;
+      color: #d3d3d3;
+      background-color: rgb(0, 0, 0);
+      border-radius: 10px;
+      border: 2px solid rgb(240, 235, 235);
+      padding: 2px;
+      overflow: hidden;
+      z-index: 19;                                                              
+    }
+    .temas{
+      position: fixed;
+    }
+    b{
+      color: red;
+    }
+
+    #nois{
+      text-align: center;
+      margin-bottom: 2%;
+      border:2px solid rgb(255, 255, 255);
+    }
+    .nozes {
+      margin: 0 2%;
+      gap: 10px;
+      padding: 20px 0;
+      overflow: auto;
+      white-space: nowrap;
+    }
+
+  .nozes img {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+  }
+
+  .nozes img:hover {
+    background-color: #777;
+  }
+    @media screen and (max-width: 767px) 
+    {
+      .nozes{
+        display: flex;
+        margin-top: 16%;
+        flex-direction: row;
+     }
+     .emoji{
+      text-align: center;
+      grid-template-columns: 10% 14% 10%;
+      display: grid;
+      grid-area: 100%;
+      justify-content: center;
+      margin-bottom: 0;
+      gap:100px;
+      margin-left: 3%;
+      
+    }
+
+    
+    }
+    .emoji{
+      text-align: center;
+      grid-template-columns: 10% 14% 10%;
+      display: grid;
+      grid-area: 100%;
+      justify-content: center;
+      gap:100px;
+      margin-left: 3%;
+      
+    }
+    @media screen and (max-width: 767px) {
+      .emoji{
+        position: relative;
+      text-align: center;
+      grid-template-columns: 9% 18% 10%;
+      display: grid;
+      grid-area: 100%;
+      justify-content: start;
+      margin-bottom: -18%;
+      gap:100px;
+      align-items: center;
+      margin-left: 3%;
+    }
+      
+    }
+    #coraçao{
+      rotate: -14deg;
+      width: 70px;
+      animation: animação 2s alternate infinite ease-in-out;
+    }
+    #feliz{
+      rotate: -14deg;
+      width: 70px;
+      animation: animação 2s alternate infinite ease-in-out;
+    }
+    #gatos{
+      translate: 0 -10px ;
+      animation: pulse 2s alternate infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      from{
+        transform: scale(0.8);
+      }      
+      to{
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes animação {
+      from{
+        rotate: 30deg;
+      }
+      to{
+      rotate: -30deg;
+      }
+    }
+
+
+</style>
+
+<body id="fundo">
   <header>
-    <img src="manu2.jpeg">
-    <p>
-      <h1>Meu amor</h1>
-    </p>
-    <buttom>
-    <p>
-      <h2> <b>&hearts;</b><a href="https://cssgradient.io/" target="_blank"> Manu </a> <b>&hearts;</b></h2>
-    </p>
-    </buttom>
+    
+    <div class="temas">
+      <ul id="tema">
+        <p style="padding-left: 6px; cursor: default;"><b>tema</b></p>
+        <p style="border-left: 2px solid white; padding: 20px 3px; cursor: pointer;" onclick="escuro()" id="escuro">escuro</p>
+        <p style="border-left: 2px solid white; padding: 20px 3px; cursor: pointer;" onclick="claro()" id="claro">claro</p>
+      </ul>
+
+      <div class="luz">
+        <div id="img"><img id="escode" src="apagada.png" width="60px"></div>
+        <div class = "images"> 
+          <div id="escode2" class="Drop-shadow">
+            <img src="acessa.png" width="60px"> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
-  <body>
-    <img src="manu.jpeg">
-    <h1>Meu amor</h>
-  </body>
+
+  <h1>te amo manu</h1>
+  <h2 class="texto" >esse site feito para testar javascript, e esse texto é uma demonstraçao (<b>meu pau na sua mao</b>) de conteudo entao eu vo escreve qualquer coisa aqui so para dar espaço</h2>
+  
+
+  <div class="nois-image"> 
+    <p class="emoji">
+      
+      <img id="coraçao"src="coraçao.png">
+      <img id="gatos"  width="130px" src="https://i.redd.it/7wvp4hsqw2q91.png">
+      <img id="feliz" style="rotate: 14deg;" width="70px" src="feliz.png">
+    </p>
+    <div class="nozes">
+      <img id="nois" style="border-radius: 15px; text-align: center; rotate: -0deg;" width="210px" height="310px" src="nois2.webp">
+      <img id="nois" style="border-radius: 15px; text-align: center; rotate: -0deg;" width="210px" height="310px" src="nois.webp">
+      <img id="nois" style="border-radius: 15px; text-align: center; rotate: -0deg;" width="210px" height="310px" src="nois3.jpg">
+      <img id="nois" style="border-radius: 15px; text-align: center; rotate: -0deg;" width="210px" height="310px" src="nois4.jpg">
+      <img id="nois" style="border-radius: 15px; text-align: center; rotate: -0deg;" width="210px" height="310px" src="nois5.jfif">
+    </div>
+  </div>
+  
+  <img id="direita" src="coraçao.png" width="50px">
+</body>
 </html>
